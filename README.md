@@ -42,7 +42,6 @@ $ docker-compose start
 $ docker-compose down
 
 # Stop docker-compose
-
 $ docker-compose stop
 
 # Exec a command
