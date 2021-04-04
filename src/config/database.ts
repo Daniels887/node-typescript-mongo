@@ -5,11 +5,18 @@ class Database {
     this.init();
   }
 
-  init() {
-    mongoose.connect("mongodb://db:27017/crud-node-mongo-docker", {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+  async init() {
+    await mongoose.connect(
+      `mongodb://db:27017/${
+        process.env.NODE_ENV === "test"
+          ? "crud-node-mongo-docker-test"
+          : "crud-node-mongo-docker"
+      }`,
+      {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      }
+    );
   }
 }
 

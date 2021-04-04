@@ -1,5 +1,5 @@
 import { Request } from "express";
-import Product from "../models/Product";
+import Product from "models/Product";
 
 interface IProductController {
   index(req: Request<{ productId: string }>, res: any): any;

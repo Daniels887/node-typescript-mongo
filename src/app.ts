@@ -1,6 +1,6 @@
 import express, { Express } from "express";
 import routes from "./routes";
-import "src/config/database";
+import "config/database";
 
 interface IApp {
   server: Express;
